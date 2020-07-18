@@ -1,10 +1,10 @@
 name: Docker Image CI
 
 on:
+  schedule:
+    - cron: "0 6 1 * *"
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    paths: [ Dockerfile ]
 
 jobs:
 
