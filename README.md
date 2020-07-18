@@ -1,3 +1,3 @@
 # ubuntu-basic
 Nicer interface on top of docker ubuntu image.
-![](https://github.com/toytag/ubuntu-basic/.github/workflows/docker-image.yml/badge.svg)
+![Docker Image CI](https://github.com/toytag/ubuntu-basic/workflows/Docker%20Image%20CI/badge.svg?branch=master)
