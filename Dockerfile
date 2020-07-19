@@ -3,7 +3,7 @@ FROM ubuntu:16.04
 # mirrors
 # RUN sed -i "s/archive.ubuntu.com/mirrors.aliyun.com/g" /etc/apt/sources.list
 
-# basic
+# basic config
 RUN apt-get update && apt-get -y upgrade \
     && apt-get install -y curl git locales tmux vim zsh \
     && rm -rf /var/lib/apt/lists/* \
