@@ -20,13 +20,7 @@ jobs:
       run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
     - name: Build the Docker image -- Ubuntu
       run: docker buildx create --use |
-            docker buildx build --push \
-              --platform linux/amd64,linux/arm64,linux/386,linux/arm/v7 \
-              --tag ztangc1/ubuntu-basic:latest \
-              --file Dockerfile ./
+          docker buildx build --push --platform linux/amd64,linux/arm64,linux/386,linux/arm/v7 --tag ztangc1/ubuntu-basic:latest --file Dockerfile ./
     - name: Build the Docker image -- Alpine
       run: docker buildx create --use |
-            docker buildx build --push \
-              --platform linux/amd64,linux/arm64,linux/386,linux/arm/v7 \
-              --tag ztangc1/alpine-basic:latest \
-              --file alpine.dockerfile ./
+          docker buildx build --push --platform linux/amd64,linux/arm64,linux/386,linux/arm/v7 --tag ztangc1/alpine-basic:latest --file alpine.dockerfile ./
