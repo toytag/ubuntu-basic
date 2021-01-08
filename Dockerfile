@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
 
 # mirrors
-RUN sed -i "s/archive.ubuntu.com/mirrors.aliyun.com/g" /etc/apt/sources.list
+# RUN sed -i "s/archive.ubuntu.com/mirrors.aliyun.com/g" /etc/apt/sources.list
 
 # update
 RUN apt-get update && apt-get -y upgrade \
